@@ -1,4 +1,4 @@
-package com.kata.Controller;
+package com.kata.controller;
 
 import java.util.List;
 
