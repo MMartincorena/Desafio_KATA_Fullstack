@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+  }
+  
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 52px;
+    color: #1a0a55;
+  }
+  
+  .title-container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .espacio {
+    width: 100%;
+    height: 20px;
+  }
+  
+  .list-form {
+    margin: auto auto;
+    width: 80%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .list-form input {
+    height: 40px;
+    width: 90%;
+    font-size: 18px;
+    padding-left: 10px;
+    border-radius: 4px;
+    border: 1px solid darkslategray;
+  }
+  
+  .list-form button {
+    height: 40px;
+    width: calc(10% - 20px);
+    border-radius: 4px;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s all ease;
+    border-color: #15a13f;
+  }
+  
+  .list-form button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+  }
+  
+  .list-container {
+      width: calc(80% - 30px);
+      height: auto;
+      margin: 10px auto;
+      border-radius: 4px;
+      border: 1px solid darkslategray;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .list-header {
+    /* width: 100%; */
+    width: calc(100% - 40px);
+    padding: 0px 20px;
+    height: 60px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .list-header h3:nth-child(1) {
+    /* width: 5%;
+    padding-left: 20px; */
+    font-size: 18px;
+  }
+  
+  .list-header h3:nth-child(2) {
+    width: 70%;
+    padding-left: 20px;
+    font-size: 18px;
+  }
+  
+  .list-header h3 span {
+    font-weight: bold;
+    font-size: 26px;
+  }
+  
+  .list-btn-delete {
+    height: 40px;
+    width: calc(10% - 10px);
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    border-color: red;
+    transition: 0.3s all ease;
+    border-radius: 4px;
+  }
+  
+  .list-btn-edit {
+    height: 40px;
+    width: calc(10% - 10px);
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+    border-color: blue;
+    transition: 0.3s all ease;
+    border-radius: 4px;
+  }
+  
+  .todo-container {
+    /* margin-top: 15px; */
+    width: calc(100% - 40px);
+    border-radius: 4px;
+    padding: 20px;
+  }
+  
+  .todo-header {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .todo-header input {
+    width: 90%;
+    height: 40px;
+    font-size: 18px;
+    padding-left: 10px;
+    border-radius: 4px;
+  }
+  
+  .todo-header button {
+    height: 40px;
+    width: calc(10% - 20px);
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s all ease;
+    border-radius: 4px;
+    border-color: green;
+  }
+  
+  .todo-header button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+  }
+  
+  .todo-header-info {
+    margin-top: 20px;
+    width: 100%;
+    height: 60px;
+    border-radius: 4px;
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    color: darkslategray;
+    font-size: 18px;
+  }
+  
+  .todo-header-info h3:nth-child(1) {
+    padding-left: 20px;
+    width: 5%;
+  }
+  
+  .todo-header-info h3:nth-child(2) {
+    padding-left: 20px;
+    width: 55%;
+  }
+  
+  .todo-header-info h3:nth-child(3) {
+    text-align: center;
+    width: 20%;
+  }
+  
+  .todo-header-info h3:nth-child(4) {
+    margin-right: 20px;
+    width: calc(10% - 20px);
+  }
+  
+  .todo-header-info h3:nth-child(5) {
+    margin-right: 20px;
+    width: calc(10% - 20px);
+  }
+  
+  .empty-text {
+    margin-top: 10px;
+    color: red;
+    font-size: 18px;
+  }
+  
+  .todo-container-info {
+    margin-top: 10px;
+    width: 100%;
+    height: 60px;
+    border-radius: 4px;
+    border: 1px solid darkslategray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: darkslategray;
+  }
+  
+  .todo-container-info h3:nth-child(1) {
+    width: 5%;
+    padding-left: 20px;
+    color: darkslategray;
+    font-size: 18px;
+  }
+  
+  .todo-container-info h3:nth-child(2) {
+    width: 55%;
+    /* padding-left: 20px; */
+    color: darkslategray;
+    font-size: 18px;
+  }
+  
+  .todo-btn-status-container {
+    width: 20%;
+    color: darkslategray;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .todo-btn-delete {
+    height: 40px;
+    margin-right: 20px;
+    /* width: 80%; */
+    /* width: calc(10% - 20px); */
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s all ease;
+    border-radius: 4px;
+    border-color: red;
+  }
+  
+  .filaBoton{
+display: flex;
+  }
+
+  .todo-btn-edit {
+    height: 40px;
+    margin-right: 20px;
+    /* width: 80%; */
+
+    /* width: calc(10% - 20px); */
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s all ease;
+    border-radius: 4px;
+    border-color: #1572a1;
+  }
+  
+  .todo-btn-delete:hover,
+  .todo-btn-edit:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+  }
+  
+  .todo-btn-status {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    transition: 0.3s all ease;
+    color: white;
+  }
+  
+  .todo-btn-status:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+  }
+  
+  .status-complete {
+    background-color: #15a13f;
+  }
+  
+  .status-incomplete {
+    background-color: crimson;
+  }
+  
