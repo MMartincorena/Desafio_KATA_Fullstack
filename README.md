@@ -15,3 +15,4 @@ https://github.com/Sofka-XT/kata-crud-refactoring/
 
 
 Exposición del proyecto:
+https://youtu.be/36y_mW-6xbY
