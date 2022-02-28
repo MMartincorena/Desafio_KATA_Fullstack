@@ -52,7 +52,7 @@ const TodoView = (props) => {
                         <h3>Estado</h3>
                         <h3> </h3>
                     </div> 
-                : <h3 className='empty-text'>Lista vacia</h3>
+                : <h3 className='empty-text'>- - Lista vacia - -</h3>
             }
             {state.list.map((todo) => { return (
                 <div key={todo.id} className='todo-container-info'>

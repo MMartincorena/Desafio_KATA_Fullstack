@@ -1,5 +1,8 @@
 import React, { useRef, useContext, useState } from "react";
 import { ListStore, HOST_API } from "./ListProvider";
+// import Modal from "./Modal";
+
+
 
 const ListForm = () => {
   const formListRef = useRef(null);
@@ -9,18 +12,14 @@ const ListForm = () => {
   } = useContext(ListStore);
   const [state, setState] = useState(item);
 
-  const [message, setMessage] = useState(false);
-
   const onAdd = (event) => {
     event.preventDefault();
 
     // mensaje de error en caso de no definir un mensaje, o que el mismo este vacio
     if (
-      typeof state.name === "undefined" ||
-      state.name.length < 3 ||
-      state.name.length > 30
+       typeof state.name === "undefined" 
     ) {
-      setMessage(true);
+      window.alert("Ingrese un nombre de lista nuevo, y/o que no se repita");
       return;
     }
     const request = {
@@ -37,7 +36,7 @@ const ListForm = () => {
         dispatch({ type: "add-item", item: list });
         setState({ name: "" });
         formListRef.current.reset();
-        setMessage(false);
+        //  setMessage(false);
       });
   };
 
@@ -49,7 +48,7 @@ const ListForm = () => {
       state.name.length < 3 ||
       state.name.length > 30
     ) {
-      setMessage(true);
+      // setMessage(true);
       return;
     }
     const request = {
@@ -66,7 +65,7 @@ const ListForm = () => {
         dispatch({ type: "update-item", item: list });
         setState({ name: "" });
         formListRef.current.reset();
-        setMessage(false);
+        // setMessage(false);
       });
   };
 
@@ -77,7 +76,7 @@ const ListForm = () => {
           id="input-list-name"
           type="text"
           name="name"
-          placeholder="Ingrese el nombre de la lista"
+          placeholder="Lista de TO - DO"
           defaultValue={item.name}
           onChange={(event) => {
             setState({ ...state, name: event.target.value });
@@ -86,7 +85,6 @@ const ListForm = () => {
         {!item.id && <button onClick={onAdd}> AGREGAR</button>}
         {item.id && <button onClick={onEdit}> EDITAR</button>}
       </div>
-      {/* <p className={(message === true) ? 'errorMessage show' : 'errorMessage'}>You must enter between 3 and 30 characters.</p> */}
     </form>
   );
 };
